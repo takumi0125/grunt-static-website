@@ -136,7 +136,7 @@ module.exports = (grunt) ->
     # * [grunt-spritesmith](https://github.com/Ensighten/grunt-spritesmith)
     #
     sprite:
-      common:
+      index:
         src: [
           '<%= path.source %>/img/sprites/*.*'
         ]
@@ -145,7 +145,7 @@ module.exports = (grunt) ->
         imgPath: '/img/sprites.png'
         algorithm: 'binary-tree'
         padding: 1
-      index:
+      common:
         src: [
           '<%= path.source %>/common/img/sprites/*.*'
         ]
