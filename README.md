@@ -16,7 +16,7 @@ npm install
 ## 概要
 
 基本構造は  
-<a href="https://github.com/takumi0125/static-website-basic-src" target="_blank">https://github.com/takumi0125/static-website-basic-src</a>  
+<a href="https://github.com/takumi0125/static-website-basic-src" target="_blank">takumi0125/static-website-basic-src</a>  
 を使用しています。
 
 
@@ -64,14 +64,14 @@ grunt js
 CoffeeScript 文法チェック、 CoffeeScript コンパイル、TypeScript コンパイルを実行し、htdocs/ に展開します。また、拡張子が .js のファイルは文法チェック後に htdocs/ にコピーされます。
 
 ```
-grunt image
+grunt json
 ```
-grunt-spritesmith を使用してスプライト画像を生成します。生成されたスプライト画像とSCSSファイル src/ ディレクトリに展開されます。
+JSON文法チェック後、 htdocs/ にコピーされます。
 
 ```
 grunt image
 ```
-JSON文法チェック後、 htdocs/ にコピーされます。
+grunt-spritesmith を使用してスプライト画像を生成します。生成されたスプライト画像とSCSSファイル src/ ディレクトリに展開されます。
 
 
 ## bower
