@@ -80,7 +80,7 @@ grunt image
 
 `bower.json` に設定を記述することにより、`grunt init` コマンドで `src/common/js/lib/` に JS ライブラリが自動で配置されます。
 
-```
+```js
 {
   "name": "project libraries",
   "version": "0.0.0",
