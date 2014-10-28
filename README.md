@@ -71,12 +71,14 @@ JSON文法チェック後、 htdocs/ にコピーされます。
 ```
 grunt image
 ```
-grunt-spritesmith を使用してスプライト画像を生成します。生成されたスプライト画像とSCSSファイル src/ ディレクトリに展開されます。
+<a href="https://github.com/Ensighten/grunt-spritesmith" target="_blank">grunt-spritesmith</a> を使用してスプライト画像を生成します。生成されたスプライト画像とSCSSファイル src/ ディレクトリに展開されます。
+
+また、<a href="https://github.com/gruntjs/grunt-contrib-concat" target="_blank">grunt-contrib-concat</a>の設定がコメントアウトされています。使用する場合はコメントアウトを取り、適宜タスクを追加してください。
 
 
 ## bower
 
-bower.json に設定を記述することにより、grunt init コマンドで src/common/js/lib/ ディレクトリに JS ライブラリが自動で配置されます。
+bower.json に設定を記述することにより、grunt init コマンドで src/common/js/lib/ に JS ライブラリが自動で配置されます。
 
 ```
 {
