@@ -11,17 +11,21 @@ git clone git@github.com:takumi0125/grunt-static-website.git
 cd ./grunt
 npm install
 ```
-<a href="http://sass-lang.com/" target="_blank">Sass/Scss</a>, <a href="http://compass-style.org/" target="_blank">Compass</a>がインストールされていない場合はインストールしてください。
+<a href="http://sass-lang.com/" target="_blank">Sass/SCSS</a>, <a href="http://compass-style.org/" target="_blank">Compass</a>がインストールされていない場合はインストールしてください。
 
 ## 概要
 
-grunt コマンドで grunt/src/ の中身がタスクで処理され、htdocs/ に展開されます。  
-grunt watcher コマンドでローカルサーバが立ち上がります。実行中は http://localhost:50000/ で展開後のページが確認できます。
+grunt コマンドで grunt/src/ の中身がタスクで処理され、ディレクトリ構造を保ちつつ htdocs/ に展開されます。  
+grunt watcher コマンドでローカルサーバが立ち上がります。実行中は
+```
+http://localhost:50000/
+```
+で展開後のページが確認できます。
 
 
 ### 主要タスク
 
-grunt/src/ の中身を各種タスクで処理し、ディレクトリ構造を保ちつつ htdocs/ にコピーします。grunt init は実行されません。
+grunt/src/ の中身を各種タスクで処理し htdocs/ に展開します。grunt init は実行されません。
 ```
 grunt
 ```
@@ -41,17 +45,17 @@ grunt watcher
 ```
 grunt html
 ```
-Jade のコンパイルを実行し、htdocs/ に展開します。拡張子が .html のファイルは htdocs/ にコピーされます。
+Jade のコンパイルを実行し、htdocs/ に展開します。また、拡張子が .html のファイルは htdocs/ にコピーされます。
 
 ```
 grunt css
 ```
-Sass/SCSS (+Compass)、Stylusのコンパイルを実行し、 htdocs/ に展開し、 autoprefixer を実行します。拡張子が .css のファイルは htdocs/ にコピーされます。
+Sass/SCSS (+Compass) 、Stylusのコンパイルを実行し、 htdocs/ に展開されます。また、拡張子が .css のファイルは htdocs/ にコピーされます。その後、htdocs/ 内のcss に対して <a href="https://github.com/nDmitry/grunt-autoprefixer" target="_blank">grunt-autoprefixer</a> を実行します。
 
 ```
 grunt css
 ```
-JS 文法チェック、 CoffeeScript 文法チェック、 CoffeeScript コンパイル、TypeScript コンパイルを実行し、htdocs/ に展開します。拡張子が .js のファイルは htdocs/ にコピーされます。
+CoffeeScript 文法チェック、 CoffeeScript コンパイル、TypeScript コンパイルを実行し、htdocs/ に展開します。また、拡張子が .js のファイルは文法チェック後に htdocs/ にコピーされます。
 
 ```
 grunt image
@@ -62,8 +66,6 @@ grunt-spritesmith を使用してスプライト画像を生成します。生�
 grunt image
 ```
 JSON文法チェック後、 htdocs/ にコピーされます。
-
-
 
 
 ## bower
@@ -119,5 +121,4 @@ bower.json に設定を記述することにより、grunt init コマンドで 
 
 ```
 
-テンプレートでは、exportsOverrideを指定してminifyされたファイルがインストールされるようになっています。  
-ライブラリが不要であれば devDependencies から削除してください。
+テンプレートでは、exportsOverrideを指定してminifyされたファイルがインストールされるようになっています。ライブラリが不要であれば devDependencies から削除してください。
