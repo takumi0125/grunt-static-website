@@ -39,9 +39,9 @@ module.exports = (grunt) ->
       publish: path.join '..', 'htdocs'
 
 
-    #################
-    ###   bower   ###
-    #################
+    ################
+    ###   init   ###
+    ################
 
     #
     # Bowerによるライブラリインストールタスク
@@ -49,11 +49,10 @@ module.exports = (grunt) ->
     # * [grunt-bower-task](https://github.com/yatskevich/grunt-bower-task)
     #
     bower:
-      install:
+      source:
         options:
           targetDir: '<%= path.source %>'
           layout: (type, component, source)->
-            console.log component, source
             if type is 'css'
               return path.join 'common', 'css', 'lib'
             else
@@ -67,7 +66,7 @@ module.exports = (grunt) ->
     ################
     ###   html   ###
     ################ 
-
+    
     #
     # Jade コンパイルタスク
     #
@@ -101,7 +100,7 @@ module.exports = (grunt) ->
         unixNewlines: true
         compass: true
         noCache: false
-        sourcemap: false
+        sourcemap: 'none'
         style: 'expanded'
       source:
         expand: true
@@ -137,9 +136,7 @@ module.exports = (grunt) ->
     #
     sprite:
       index:
-        src: [
-          '<%= path.source %>/img/sprites/*.*'
-        ]
+        src: [ '<%= path.source %>/img/_sprites/*' ]
         destImg: '<%= path.source %>/img/sprites.png'
         destCSS: '<%= path.source %>/css/_sprites.scss'
         imgPath: '/img/sprites.png'
@@ -147,13 +144,28 @@ module.exports = (grunt) ->
         padding: 1
       common:
         src: [
-          '<%= path.source %>/common/img/sprites/*.*'
+          '<%= path.source %>/common/img/_sprites/*'
         ]
         destImg: '<%= path.source %>/common/img/sprites.png'
-        destCSS: '<%= path.source %>/common/css/sprites.scss'
+        destCSS: '<%= path.source %>/common/css/_sprites.scss'
         imgPath: '/common/img/sprites.png'
         algorithm: 'binary-tree'
         padding: 1
+
+    #
+    # autoprefixer タスク
+    #
+    # * [grunt-autoprefixer](https://github.com/nDmitry/grunt-autoprefixer)
+    #
+    autoprefixer:
+      options: ''
+      source:
+        expand: true
+        cwd: '<%= path.publish %>'
+        src: '**/!(_)*.css'
+        filter: 'isFile'
+        dest: '<%= path.publish %>'
+        ext: '.css'
 
 
     ##############
@@ -187,7 +199,6 @@ module.exports = (grunt) ->
         cwd: '<%= path.source %>'
         src: [
           '**/*.coffee'
-          '**/*.litcoffee'
           '!**/lib/**/*'
         ]
         filter: 'isFile'
@@ -324,17 +335,15 @@ module.exports = (grunt) ->
           '!**/*.hbs'
           '!**/*.jade'
           '!**/*.less'
-          '!**/*.litcoffee'
           '!**/*.sass'
           '!**/*.scss'
           '!**/*.styl'
-          '!**/sprites*/*'
           '!**/_*/*'
-          '!**/src/*'
-          '!**/*.map'
+          '!**/_*'
           '!data.json'
           '!README.md'
           '!**/.git/*'
+          '!**/.gitkeep'
         ]
         filter: 'isFile'
         dest: '<%= path.publish %>'
@@ -423,7 +432,6 @@ module.exports = (grunt) ->
         files: [
           '<%= path.source %>/**/*.coffee'
           '<%= path.source %>/**/*.js'
-          '<%= path.source %>/**/*.litcoffee'
         ]
         tasks: [
           'js'
@@ -449,6 +457,7 @@ module.exports = (grunt) ->
     css: [
       'sass'
       'stylus'
+      'autoprefixer'
     ]
     html: [
       'jade'
@@ -483,6 +492,7 @@ module.exports = (grunt) ->
 
 
   # Grunt プラグイン読込
+  grunt.loadNpmTasks 'grunt-autoprefixer'
   grunt.loadNpmTasks 'grunt-bower-task'
   grunt.loadNpmTasks 'grunt-contrib-clean'
   grunt.loadNpmTasks 'grunt-contrib-coffee'
