@@ -15,7 +15,13 @@ npm install
 
 ## 概要
 
-grunt コマンドで grunt/src/ の中身がタスクで処理され、ディレクトリ構造を保ちつつ htdocs/ に展開されます。  
+基本構造は  
+<a href="https://github.com/takumi0125/static-website-basic-src" target="_blank">https://github.com/takumi0125/static-website-basic-src</a>  
+を使用しています。
+
+
+grunt コマンドで grunt/src/ の中身がタスクで処理され、ディレクトリ構造を保ちつつ htdocs/ に展開されます。
+
 grunt watcher コマンドでローカルサーバが立ち上がります。実行中は
 ```
 http://localhost:50000/
@@ -53,7 +59,7 @@ grunt css
 Sass/SCSS (+Compass) 、Stylusのコンパイルを実行し、 htdocs/ に展開されます。また、拡張子が .css のファイルは htdocs/ にコピーされます。その後、htdocs/ 内のcss に対して <a href="https://github.com/nDmitry/grunt-autoprefixer" target="_blank">grunt-autoprefixer</a> を実行します。
 
 ```
-grunt css
+grunt js
 ```
 CoffeeScript 文法チェック、 CoffeeScript コンパイル、TypeScript コンパイルを実行し、htdocs/ に展開します。また、拡張子が .js のファイルは文法チェック後に htdocs/ にコピーされます。
 
