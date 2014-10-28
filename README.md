@@ -4,7 +4,7 @@ grunt-static-website
 静的サイト制作用の汎用gruntタスクテンプレートです。
 
 ## インストール
-```
+```bash
 mkdir yourProject/
 cd yourProject
 git clone git@github.com:takumi0125/grunt-static-website.git
