@@ -20,9 +20,9 @@ npm install
 を使用しています。
 
 
-grunt コマンドで `grunt/src/` の中身がタスクで処理され、ディレクトリ構造を保ちつつ `htdocs/` に展開されます。
+`grunt` コマンドで `grunt/src/` の中身がタスクで処理され、ディレクトリ構造を保ちつつ `htdocs/` に展開されます。
 
-grunt watcher コマンドでローカルサーバが立ち上がります。実行中は
+`grunt watcher` コマンドでローカルサーバが立ち上がります。実行中は
 ```
 http://localhost:50000/
 ```
