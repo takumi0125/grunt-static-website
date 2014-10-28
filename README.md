@@ -38,34 +38,32 @@ grunt watcher
 
 ### 個別タスク
 
-Jade のコンパイルを実行し、htdocs/ に展開します。拡張子が .html のファイルは htdocs/ にコピーされます。
 ```
 grunt html
 ```
+Jade のコンパイルを実行し、htdocs/ に展開します。拡張子が .html のファイルは htdocs/ にコピーされます。
 
+```
+grunt css
+```
 Sass/SCSS (+Compass)、Stylusのコンパイルを実行し、 htdocs/ に展開し、 autoprefixer を実行します。拡張子が .css のファイルは htdocs/ にコピーされます。
+
 ```
 grunt css
 ```
-
 JS 文法チェック、 CoffeeScript 文法チェック、 CoffeeScript コンパイル、TypeScript コンパイルを実行し、htdocs/ に展開します。拡張子が .js のファイルは htdocs/ にコピーされます。
-```
-grunt css
-```
 
+```
+grunt image
+```
 grunt-spritesmith を使用してスプライト画像を生成します。生成されたスプライト画像とSCSSファイル src/ ディレクトリに展開されます。
+
 ```
 grunt image
 ```
-
 JSON文法チェック後、 htdocs/ にコピーされます。
-```
-grunt image
-```
 
 
-
-その他個別タスクは Gruntfile.coffee をご参照ください。
 
 
 ## bower
