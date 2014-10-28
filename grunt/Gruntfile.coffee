@@ -332,7 +332,6 @@ module.exports = (grunt) ->
           '**/*'
           '!**/*.coffee'
           '!**/*.ts'
-          '!**/*.hbs'
           '!**/*.jade'
           '!**/*.less'
           '!**/*.sass'
