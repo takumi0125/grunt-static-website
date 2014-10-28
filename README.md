@@ -20,7 +20,7 @@ npm install
 を使用しています。
 
 
-grunt コマンドで grunt/src/ の中身がタスクで処理され、ディレクトリ構造を保ちつつ htdocs/ に展開されます。
+grunt コマンドで `grunt/src/` の中身がタスクで処理され、ディレクトリ構造を保ちつつ `htdocs/` に展開されます。
 
 grunt watcher コマンドでローカルサーバが立ち上がります。実行中は
 ```
@@ -31,12 +31,12 @@ http://localhost:50000/
 
 ### 主要タスク
 
-grunt/src/ の中身を各種タスクで処理し htdocs/ に展開します。grunt init は実行されません。
+`grunt/src/` の中身を各種タスクで処理し `htdocs/` に展開します。`grunt init` は実行されません。
 ```
 grunt
 ```
 
-bower.jsonで定義されているJSライブラリをインストール(後述)します。開発開始時に実行して下さい。
+`bower.json` で定義されているJSライブラリをインストール(後述)します。開発開始時に実行して下さい。
 ```
 grunt init
 ```
@@ -51,34 +51,34 @@ grunt watcher
 ```
 grunt html
 ```
-Jade のコンパイルを実行し、htdocs/ に展開します。また、拡張子が .html のファイルは htdocs/ にコピーされます。
+Jade のコンパイルを実行し、 `htdocs/` に展開します。また、拡張子が .html のファイルは `htdocs/` にコピーされます。
 
 ```
 grunt css
 ```
-Sass/SCSS (+Compass) 、Stylusのコンパイルを実行し、 htdocs/ に展開されます。また、拡張子が .css のファイルは htdocs/ にコピーされます。その後、htdocs/ 内のcss に対して <a href="https://github.com/nDmitry/grunt-autoprefixer" target="_blank">grunt-autoprefixer</a> を実行します。
+Sass/SCSS (+Compass) 、Stylus のコンパイルを実行し、 `htdocs/` に展開されます。また、拡張子が .css のファイルは `htdocs/` にコピーされます。その後、htdocs/ 内のcss に対して <a href="https://github.com/nDmitry/grunt-autoprefixer" target="_blank">grunt-autoprefixer</a> を実行します。
 
 ```
 grunt js
 ```
-CoffeeScript 文法チェック、 CoffeeScript コンパイル、TypeScript コンパイルを実行し、htdocs/ に展開します。また、拡張子が .js のファイルは文法チェック後に htdocs/ にコピーされます。
+CoffeeScript 文法チェック、 CoffeeScript コンパイル、TypeScript コンパイルを実行し、`htdocs/` に展開します。また、拡張子が .js のファイルは文法チェック後に `htdocs/` にコピーされます。
 
 ```
 grunt json
 ```
-JSON文法チェック後、 htdocs/ にコピーされます。
+JSON文法チェック後、 `htdocs/` にコピーされます。
 
 ```
 grunt image
 ```
-<a href="https://github.com/Ensighten/grunt-spritesmith" target="_blank">grunt-spritesmith</a> を使用してスプライト画像を生成します。生成されたスプライト画像とSCSSファイル src/ ディレクトリに展開されます。
+<a href="https://github.com/Ensighten/grunt-spritesmith" target="_blank">grunt-spritesmith</a> を使用してスプライト画像を生成します。生成されたスプライト画像と SCSS ファイル `src/` ディレクトリに展開されます。
 
-また、<a href="https://github.com/gruntjs/grunt-contrib-concat" target="_blank">grunt-contrib-concat</a>の設定がコメントアウトされています。使用する場合はコメントアウトを取り、適宜タスクを追加してください。
+また、 <a href="https://github.com/gruntjs/grunt-contrib-concat" target="_blank">grunt-contrib-concat</a> の設定がコメントアウトされています。使用する場合はコメントアウトを取り、適宜タスクを追加してください。
 
 
 ## bower
 
-bower.json に設定を記述することにより、grunt init コマンドで src/common/js/lib/ に JS ライブラリが自動で配置されます。
+`bower.json` に設定を記述することにより、`grunt init` コマンドで `src/common/js/lib/` に JS ライブラリが自動で配置されます。
 
 ```
 {
@@ -129,4 +129,4 @@ bower.json に設定を記述することにより、grunt init コマンドで 
 
 ```
 
-テンプレートでは、exportsOverrideを指定してminifyされたファイルがインストールされるようになっています。ライブラリが不要であれば devDependencies から削除してください。
+テンプレートでは、 exportsOverride を指定して minify されたファイルがインストールされるようになっています。ライブラリが不要であれば devDependencies から削除してください。
