@@ -8,7 +8,7 @@ grunt-static-website
 mkdir yourProject/
 cd yourProject
 git clone git@github.com:takumi0125/grunt-static-website.git
-cd ./grunt
+cd grunt
 npm install
 ```
 <a href="http://sass-lang.com/" target="_blank">Sass/SCSS</a>, <a href="http://compass-style.org/" target="_blank">Compass</a>がインストールされていない場合はインストールしてください。
