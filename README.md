@@ -69,11 +69,23 @@ grunt json
 JSON文法チェック後、 htdocs/ にコピーされます。
 
 ```
-grunt image
+grunt img
 ```
 <a href="https://github.com/Ensighten/grunt-spritesmith" target="_blank">grunt-spritesmith</a> を使用してスプライト画像を生成します。生成されたスプライト画像とSCSSファイル src/ ディレクトリに展開されます。
 
 また、<a href="https://github.com/gruntjs/grunt-contrib-concat" target="_blank">grunt-contrib-concat</a>の設定がコメントアウトされています。使用する場合はコメントアウトを取り、適宜タスクを追加してください。
+
+その他個別タスクは `Gruntfile.coffee` をご参照ください。
+
+
+## スプライト生成タスク
+
+スプライト画像を生成する場合は、スプライト画像生成タスクを追加する
+```
+createSpritesTasks
+```
+を使用してください。使用方法は `Gruntfile.coffee` の54行目以降に記載されています。呼び出す場合は conf, task が定義された後に呼び出します。サンプルでは488行目で呼び出しています。
+
 
 
 ## bower
