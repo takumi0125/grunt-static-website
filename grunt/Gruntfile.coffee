@@ -17,10 +17,9 @@ paths =
   js: '**/*.js'
   json: '**/*.json'
   coffee: '**/*.coffee'
-  img: '**/img/**/*'
+  img: '**/img/**'
   others: [
-    '**/*'
-
+    '**'
     '!**/*.html'
     '!**/*.jade'
     '!**/*.css'
@@ -29,13 +28,12 @@ paths =
     '!**/*.js'
     '!**/*.json'
     '!**/*.coffee'
-    '!**/img/**/*'
+    '!**/img/**'
     '!**/*.md'
-    '!**/.git/**/*'
+    '!**/.git/**'
     '!**/.gitkeep'
-    
     '!_*'
-    '!**/_*/**/*'
+    '!**/_*/**'
   ]
 
 #
@@ -47,8 +45,7 @@ module.exports = (grunt) ->
 
 
   #「_」が先頭のファイル、ディレクトリを除外するように src 用の配列を生成
-  createSrcArr = (name) ->
-    ret = [].concat paths[name], '!_*', '!**/_*/**/*'
+  createSrcArr = (name) -> [].concat paths[name], '!_*', '!**/_*/**'
 
   #
   # spritesmith のタスクを生成
