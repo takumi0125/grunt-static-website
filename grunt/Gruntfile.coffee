@@ -2,7 +2,6 @@
 
 SRC_DIR = './src'
 PUBLISH_DIR = '../htdocs'
-BOWER_COMPONENTS = './bower_components'
 DATA_JSON = "_data.json"
 
 BOWER_INSTALL_DIR_BASE = '/common' # '/common' or ''
