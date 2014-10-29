@@ -56,12 +56,12 @@ Jade のコンパイルを実行し、 `htdocs/` に展開します。また、�
 ```
 grunt css
 ```
-Sass/SCSS (+Compass) のコンパイルを実行し、 `htdocs/` に展開されます。また、拡張子が .css のファイルは `htdocs/` 以下にコピーされます。その後、htdocs/ 内のcss に対して <a href="https://github.com/nDmitry/grunt-autoprefixer" target="_blank">grunt-autoprefixer</a> を実行します。
+Sass/SCSS (+Compass) のコンパイルを実行し、 `htdocs/` 以下に展開されます。また、拡張子が .css のファイルは `htdocs/` 以下にコピーされます。その後、htdocs/ 内のcss に対して <a href="https://github.com/nDmitry/grunt-autoprefixer" target="_blank">grunt-autoprefixer</a> を実行します。
 
 ```
 grunt js
 ```
-CoffeeScript 文法チェック、 CoffeeScript コンパイル、TypeScript コンパイルを実行し、`htdocs/` に展開します。また、拡張子が .js のファイルは文法チェック後に `htdocs/` 以下にコピーされます。
+CoffeeScript 文法チェック、 CoffeeScript コンパイル、TypeScript コンパイルを実行し、`htdocs/` 以下に展開します。また、拡張子が .js のファイルは文法チェック後に `htdocs/` 以下にコピーされます。
 
 ```
 grunt json
