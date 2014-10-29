@@ -82,7 +82,7 @@ grunt img
 
 スプライト画像を生成する場合は、スプライト画像生成タスクを追加する
 ```
-createSpritesTasks
+createSpritesTask
 ```
 を使用してください。使用方法は `Gruntfile.coffee` の54行目以降に記載されています。呼び出す場合は conf, task が定義された後に呼び出します。サンプルでは488行目で呼び出しています。
 
