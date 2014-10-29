@@ -51,29 +51,29 @@ grunt watcher
 ```
 grunt html
 ```
-Jade のコンパイルを実行し、 `htdocs/` に展開します。また、拡張子が .html のファイルは `htdocs/` にコピーされます。
+Jade のコンパイルを実行し、 `htdocs/` に展開します。また、拡張子が .html のファイルは `htdocs/` 以下にコピーされます。
 
 ```
 grunt css
 ```
-Sass/SCSS (+Compass) 、Stylus のコンパイルを実行し、 `htdocs/` に展開されます。また、拡張子が .css のファイルは `htdocs/` にコピーされます。その後、htdocs/ 内のcss に対して <a href="https://github.com/nDmitry/grunt-autoprefixer" target="_blank">grunt-autoprefixer</a> を実行します。
+Sass/SCSS (+Compass) のコンパイルを実行し、 `htdocs/` に展開されます。また、拡張子が .css のファイルは `htdocs/` 以下にコピーされます。その後、htdocs/ 内のcss に対して <a href="https://github.com/nDmitry/grunt-autoprefixer" target="_blank">grunt-autoprefixer</a> を実行します。
 
 ```
 grunt js
 ```
-CoffeeScript 文法チェック、 CoffeeScript コンパイル、TypeScript コンパイルを実行し、`htdocs/` に展開します。また、拡張子が .js のファイルは文法チェック後に `htdocs/` にコピーされます。
+CoffeeScript 文法チェック、 CoffeeScript コンパイル、TypeScript コンパイルを実行し、`htdocs/` に展開します。また、拡張子が .js のファイルは文法チェック後に `htdocs/` 以下にコピーされます。
 
 ```
 grunt json
 ```
-JSON文法チェック後、 `htdocs/` にコピーされます。
+JSON文法チェック後、 `htdocs/` 以下にコピーされます。
 
 ```
 grunt img
 ```
-<a href="https://github.com/Ensighten/grunt-spritesmith" target="_blank">grunt-spritesmith</a> を使用してスプライト画像を生成します。生成されたスプライト画像と SCSS ファイル `src/` ディレクトリに展開されます。
+<a href="https://github.com/Ensighten/grunt-spritesmith" target="_blank">grunt-spritesmith</a> を使用してスプライト画像を生成します。生成されたスプライト画像と SCSS ファイルが `src/` 以下に展開されます。
 
-また、 <a href="https://github.com/gruntjs/grunt-contrib-concat" target="_blank">grunt-contrib-concat</a> の設定がコメントアウトされています。使用する場合はコメントアウトを取り、適宜タスクを追加してください。
+また、 <a href="https://github.com/gruntjs/grunt-contrib-concat" target="_blank">grunt-contrib-concat</a> を使用する場合は適宜タスクを追加してください。
 
 その他個別タスクは `Gruntfile.coffee` をご参照ください。
 
