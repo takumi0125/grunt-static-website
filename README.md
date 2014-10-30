@@ -62,12 +62,12 @@ Sass/SCSS (+Compass) のコンパイルを実行し、 `htdocs/` 以下に展開
 ```
 grunt js
 ```
-CoffeeScript 文法チェック、 CoffeeScript コンパイル、TypeScript コンパイルを実行し、`htdocs/` 以下に展開します。また、拡張子が .js のファイルは文法チェック後に `htdocs/` 以下にコピーされます。
+<a href="https://github.com/vojtajina/grunt-coffeelint" target="_blank">grunt-coffeelint</a> 実行後、CoffeeScript コンパイルし、 `htdocs/` 以下に展開します。また、拡張子が .js のファイルは <a href="https://github.com/gruntjs/grunt-contrib-jshint" target="_blank">grunt-contrib-jshint</a> 実行後、 `htdocs/` 以下にコピーされます。
 
 ```
 grunt json
 ```
-JSON文法チェック後、 `htdocs/` 以下にコピーされます。
+<a href="https://github.com/brandonramirez/grunt-jsonlint" target="_blank">grunt-jsonlint</a> 実行後、 `htdocs/` 以下にコピーされます。
 
 ```
 grunt img

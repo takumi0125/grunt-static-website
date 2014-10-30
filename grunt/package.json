@@ -23,6 +23,6 @@
     "grunt-contrib-watch": ">=0.4.4",
     "grunt-jsonlint": ">=1.0.0",
     "grunt-notify": ">=0.2.4",
-    "grunt-spritesmith": ">=1.5.2",
+    "grunt-spritesmith": ">=1.5.2"
   }
 }
