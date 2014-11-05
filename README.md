@@ -5,6 +5,10 @@ grunt-static-website
 
 ## インストール
 ```bash
+npm install -g bower grunt-cli
+```
+grunt-cli, bower がインストールされていなければインストール。
+```bash
 mkdir yourProject
 cd yourProject
 git clone git@github.com:takumi0125/grunt-static-website.git .
