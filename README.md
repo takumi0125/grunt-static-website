@@ -12,7 +12,6 @@ grunt-cli, bower がインストールされていなければインストール
 mkdir yourProject
 cd yourProject
 git clone --recursive https://github.com/takumi0125/grunt-static-website.git .
-git submodule update --init
 cd grunt
 npm install
 ```
