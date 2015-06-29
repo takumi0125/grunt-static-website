@@ -90,8 +90,7 @@ grunt img
 ```
 createSpritesTask
 ```
-を使用してください。使用方法は `Gruntfile.coffee` の54行目以降に記載されています。呼び出す場合は conf, task が定義された後に呼び出します。サンプルでは488行目で呼び出しています。
-
+を使用してください。使用方法は `Gruntfile.coffee` のに記載されています。
 
 
 ## bower
